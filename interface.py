@@ -1,7 +1,6 @@
 import streamlit as st 
 import pandas as pd
 import numpy as np 
-from google_images_search import GoogleImagesSearch
 from PIL import Image
 import requests 
 from streamlit_card import card 
@@ -14,28 +13,6 @@ def get_img(name):
     img = bing_image_urls(name, limit=1)
 
     return img 
-
-def get_url(name):
-    gis = GoogleImagesSearch('AIzaSyAbTRtQbGYNiw5maBrqC7zfrOMeYQ8OGe8', 'a3e61cb8e8e254222')
-
-    _search_params = {
-        'q': name,
-        'num': 5,
-        'fileType': ['jpg','png'],
-        'rights': ['cc_publicdomain','cc_attribute','cc_sharealike','cc_noncommercial','cc_nonderived'],
-        'safe': 'active', ##
-        'imgType': 'photo', ##
-        'imgSize': 'medium', ##
-        'imgDominantColor': 'imgDominantColorUndefined', ##
-        'imgColorType': 'color' ##
-    }
-
-    # this will only search for images:
-    gis.search(search_params=_search_params)
-
-    res = gis.results()
-
-    return res[0].url 
 
 def recommend_product(product_type, price, skin_type, condition):
     cs_list = []
