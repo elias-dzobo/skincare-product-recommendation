@@ -1,5 +1,5 @@
-streamlit-card
 streamlit 
 pandas 
 numpy 
 bing_image_urls
+streamlit-card==0.0.3
