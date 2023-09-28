@@ -1,4 +1,4 @@
-streamlit_card
+streamlit-card
 streamlit 
 pandas 
 numpy 
