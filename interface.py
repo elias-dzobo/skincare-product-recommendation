@@ -1,8 +1,6 @@
 import streamlit as st 
 import pandas as pd
 import numpy as np 
-from PIL import Image
-import requests 
 from streamlit_card import card 
 from bing_image_urls import bing_image_urls
 
